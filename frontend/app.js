@@ -31,7 +31,7 @@ function App() {
 
         const newWorkout = await response.json();
 
-        set_workouts([newWorkouts, ...workouts]);
+        set_workouts([newWorkout, ...workouts]);
 
         set_title("");
         set_details("");
@@ -79,10 +79,10 @@ function App() {
                             type="button"
                             className={intensity === "high" ? "choice selected" : "choice"}
                             onClick={() => set_intensity("high")}
-                        >Low</button>
+                        >High</button>
                     </div>
 
-                    <button className="submit_btn" type="submit">Submit Workout</button>
+                    <button className="submit-btn" type="submit">Submit Workout</button>
 
                 </form>
             </section>
